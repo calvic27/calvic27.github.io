@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    font-family: Arial, sans-serif;
+}
+
+.main-carousel-container {
+    position: relative;
+    top: 20vh; /* Ajusta este valor según tus necesidades */
+    z-index: 3;
+}
+
+.carousel-segment {
+    margin-bottom: 30px; /* Espacio entre segmentos */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.carousel-header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.carousel-header .explore-all {
+    font-size: 1rem;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    position: relative;
+    min-width: 300px;
+    margin-right: 25px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.carousel-item:hover img {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.handle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.handlePrev {
+    left: 10px;
+}
+
+.handleNext {
+    right: 10px;
+}
+
+.selected-item-display {
+    display: none; /* Ocultar por defecto */
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    width: 100%;
+    height: 300px; /* Altura fija para el contenedor de la imagen seleccionada */
+}
+
+.selected-image {
+    width: 45%;
+    height: 100%;
+}
+
+.selected-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio del contenedor */
+    border-radius: 15px;
+}
+
+.selected-description {
+    width: 45%;
+    color: white;
+}
+
+.selected-description p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.selected-item-display.show {
+    display: flex; /* Mostrar cuando haya una imagen seleccionada */
+}
